@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2e18f2b45c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="background-image">
+        <img id="bgColor" src="assets/img/bg-desktop-light.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                TODO
+            </div>
+            <div class="theme">
+                <img id="sun" src="assets/img/icon-sun.svg" alt="">
+            </div>
+
+        </div>
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+                    <input id="inputCheck" type="checkbox" />
+                </div>
+            </div>
+            <div class="new-todo-input">
+                <form id="form">
+                    <input id="todo-input" type="text" placeholder="Yeni ishinizi qeyd edin" />
+                </form>
+            </div>
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                
+            </div>
+
+            <div class="todo-items-info">
+                <div class="items-left">
+                    <span  id="itemsCount"></span> items left
+                </div>
+                <div class="items-statuses">
+                    <span class="active" id="all">All</span>
+                    <span id="activeSpan">Active</span>
+                    <span id="completedSpan">Completed</span>
+                </div>
+                <div   class="items-clear">
+                    <span>Clear Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
