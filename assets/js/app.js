@@ -21,9 +21,7 @@ form.addEventListener("submit", function (event) {
     completed: inputCheck.checked,
   };
   todoList.unshift(newTodo);
-
   fillHtml();
-
   addMessage.value = "";
   inputCheck.checked = false;
 });
@@ -33,8 +31,7 @@ function fillHtml() {
   if (todoList.length > 0) {
     todoList.forEach((item, index) => {
       wrapper.innerHTML += createHtml(item, index);
-    });
-
+    })
     todoItemElems = document.querySelectorAll(".todo-item");
   }
 
@@ -50,26 +47,21 @@ function createHtml(task, index) {
     task.completed ? "checked" : ""
   } />
       </div>
-
  <div class="todo-text">
       ${todoList[index].text}
   </div>
-
   </div>
-
   <button onclick="deleteTask(${index})"><i class="fa-solid fa-x"></i></button>
 </div>  `;
 }
 
 function completeTask(index) {
   todoList[index].completed = !todoList[index].completed;
-
   if (todoList[index].completed) {
     allCompletedDelete.classList.add("active");
   } else if (!todoList[index].completed) {
     allCompletedDelete.classList.remove("active");
   }
-
   if (todoList[index].completed) {
     todoItemElems[index].classList.add("checked");
   } else {
@@ -102,7 +94,6 @@ completedSpan.addEventListener("click", function () {
          ${b[i].text}
      </div>
      </div>
-   
      <button onclick="deleteTask(${i})"><i class="fa-solid fa-x"></i></button>
  </div>`;
     wrapper.innerHTML = displayMes;
@@ -140,11 +131,6 @@ allSpan.addEventListener("click", function () {
   allSpan.classList.add("active");
 });
 
-// function checkLength() {
-//   // if (todoList.completed)
-//   itemsCount.textContent = todoList.length;
-
-// }
 
 function checkLength2() {
   itemsCount.textContent = todoList.length;
@@ -166,27 +152,14 @@ function completeDelete() {
 
 const themeBtn = document.querySelector(".theme");
 
-// themeBtn.addEventListener("click", function () {
-//   const theme = document.documentElement.dataset.theme;
-//   if (theme === "light") {
-//     document.documentElement.dataset.theme = "dark";
-//   } else {
-//     document.documentElement.dataset.theme = "light";
-//   }
-// });
-
 let bgColor = document.querySelector("#bgColor");
 
 function ligthModeOn() {
-  console.log('ligthModeOn')
   bgColor.src = "assets/img/bg-desktop-light.jpg";
 }
 function darkMode() {
-  console.log('darkMode')
   bgColor.src = "assets/img/bg-desktop-dark.jpg";
-}
-// themeBtn.addEventListener("click", transformSunToMoon);
-// themeBtn.addEventListener('click',darkMode)
+};
 
 let sun = document.getElementById("sun");
 
@@ -203,7 +176,5 @@ function transformSunToMoon() {
   }
 }
 
-let sunMoon = document.getElementById("sun");
-
 sun.addEventListener("click", transformSunToMoon);
-// themeBtn.addEventListener('click',transformSunToMoon)
+
