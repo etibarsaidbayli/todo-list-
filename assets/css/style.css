@@ -3,14 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  --text-color: #505050;
-  --background-color: #fff;
-}
-html[data-theme="dark"] {
-  --text-color: #fff;
-  --background-color: #505050;
-}
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -27,6 +19,7 @@ body {
   height: 350px;
   z-index: -1;
 }
+
 .background-image img {
   width: 100%;
   height: 100%;
@@ -39,7 +32,9 @@ body {
   max-width: 700px;
   margin: 0 30px;
   margin-top: 100px;
+  margin: 30px auto 100px;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -59,8 +54,8 @@ body {
   margin-top: 50px;
   border-radius: 6px;
   display: flex;
-  
 }
+
 .check {
   width: 50px;
   display: flex;
@@ -88,7 +83,6 @@ body {
   flex-grow: 1;
   display: flex;
   align-items: center;
- 
 }
 
 .new-todo-input form {
@@ -113,6 +107,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 70px;
   border-bottom: 1px solid hsl(237, 14%, 26%);
   color: hsl(234, 39%, 85%);
@@ -137,6 +132,7 @@ body {
 .todo-text {
   display: flex;
   align-items: center;
+  pointer-events: none;
   padding-left: 30px;
 }
 
@@ -161,16 +157,16 @@ body {
 }
 
 .items-statuses span:hover,
-.items-statuses span.active,
+.items-statuses span.important,
 .items-clear:hover {
   color: hsl(220, 98%, 61%);
 }
 
-.clear-active {
+.clear-important {
   color: hsl(220, 98%, 61%);
 }
 
-.active {
+.important {
   color: hsl(220, 98%, 61%);
 }
 
@@ -183,6 +179,7 @@ body {
   text-decoration: line-through;
   font-weight: bold;
   font-size: 20px;
+  opacity: 0.2;
 }
 
 .delition {
@@ -202,11 +199,25 @@ body {
   background: transparent;
   border-radius: 50%;
   border: none;
-  padding: 20px;
+  padding: 40px;
+  cursor:pointer;
 }
-.todo-item button i {
+
+/* .todo-item button i {
   color: #fff;
+} */
+
+
+.myDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-
-
+.todo-item button {
+  border: 2px solid white;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
